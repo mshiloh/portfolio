@@ -1,0 +1,312 @@
+* {
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "ZonaPro ExtraLight";
+  src: local("ZonaPro-ExtraLight"), url("ZonaPro-ExtraLight.otf");
+}
+
+@font-face {
+  font-family: "Slim Joe";
+  src: local("Slim Joe"), url("Slim Joe.otf");
+}
+
+/* @font-face {
+  font-family: "Slim Joe";
+  src: local("Slim Joe"), url("Slim Joe.otf");
+}
+
+@font-face {
+  font-family: 'Slim Joe';
+  src: url('SlimJoe.eot');
+  src: url('SlimJoe.eot?#iefix') format('embedded-opentype'), url('SlimJoe.woff2') format('woff2'), url('SlimJoe.woff') format('woff'), url('SlimJoe.ttf') format('truetype'), url("Slim Joe.otf") format("opentype"), url('Slim Joe.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+/* ----------- NAV ----------- */
+
+nav {
+  grid-area: nav;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  float: top;
+  z-index: 1;
+  background-color: rgba(59, 59, 59, 0.863);
+  height: 6vw;
+  width: 100vw;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "ZonaPro ExtraLight";
+  color: #C4B19E;
+  margin-left: -5vw;
+  width: 100vw;
+  font-size: 3.5vw;
+}
+
+/* ----------- HEADER ----------- */
+
+.header {
+  height: 100vh;
+  padding-top: 3.5vw;
+}
+
+header {
+  grid-area: hdr;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://i.imgur.com/FRtjuUF.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.clip {
+  background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/0xPgM5l/elegant-background-wedding-loop-animation_x1ej4ywvi__F0000.png");
+  background-position: center;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.banner {
+  grid-area: bnr;
+  text-align: center;
+  font-family: "Slim Joe";
+  margin-top: 4vh;
+  font-size: 11vw;
+}
+
+.tagline {
+  grid-area: tag;
+  font-family: "ZonaPro ExtraLight";
+  font-size: 5vw;
+}
+
+/* ----------- CUBE ----------- */
+
+[class*="cube"] {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cube {
+  transform-style: preserve-3d;
+  animation: ani 10s infinite linear;
+  font-size: 2.3vw;
+}
+
+.cube__face {
+  width: 9em;
+  height: 9em;
+  box-shadow: inset rgba(212, 188, 164, 0.671) 0 0 3px;
+  --i: 0;
+  transform: rotate3d(var(--i), calc(1 - var(--i)), 0, calc(var(--m, 0)*90deg)) translateZ(4.5em);
+}
+
+.cube__face:nth-child(n+5) {
+  --i: 1;
+}
+
+.cube__face:nth-child(2) {
+  --m: 1;
+}
+
+.cube__face:nth-child(3) {
+  --m: 2;
+}
+
+.cube__face:nth-child(4) {
+  --m: 3;
+}
+
+.cube__face:nth-child(5) {
+  --m: 1;
+}
+
+@keyframes ani {
+  100% {
+    transform: rotateY(360deg) rotateX(360deg);
+  }
+}
+
+/* ----------- GLOBAL ----------- */
+
+.contentWrapper {
+  background-image: url("https://i.imgur.com/AOQD1Ab.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sectionHeaderContainer {
+  grid-area: cth;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/0xPgM5l/elegant-background-wedding-loop-animation_x1ej4ywvi__F0000.png");
+  background-position: center;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  margin-bottom: 20px;
+  font-weight: 900;
+}
+
+.sectionHeader {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 5px;
+  font-family: "Slim Joe";
+  font-size: 7vw;
+  width: 80vw;
+}
+
+.projectSubhead {
+  font-family: "ZonaPro ExtraLight";
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(196, 177, 158, 0.432), #C4B19E, rgba(196, 177, 158, 0.432));
+  margin-bottom: 10px;
+  width: 80vw;
+}
+
+.topHr {
+  margin-top: 8vh;
+}
+
+.bottomHr {
+  margin-bottom: 5vh;
+}
+
+/* ----------- FOOTER ----------- */
+
+.footerContainer {
+  grid-area: ftr;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  padding: 1vh;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "Slim Joe";
+  color: white;
+  font-size: 5vw;
+}
+
+.footerTextContainer {
+  background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/0xPgM5l/elegant-background-wedding-loop-animation_x1ej4ywvi__F0000.png");
+  background-position: center;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  margin-right: 10px;
+}
+
+.footerText {
+  font-family: "ZonaPro ExtraLight";
+}
+
+.github,
+.linkedin {
+  margin-left: 10px;
+  height: 4.5vh;
+  width: auto;
+}
+
+.github:hover,
+.linkedin:hover {
+  margin-left: 10px;
+  height: 5vh;
+  width: auto;
+}
+
+/* Small Devices, Tablets */
+
+@media only screen and (min-width: 768px) {
+  .sectionHeader {
+    font-size: 5vw;
+  }
+}
+
+/* Small Devices, Tablets */
+
+@media only screen and (min-width: 768px) {}
+
+/* Medium Devices, Desktops */
+
+@media only screen and (min-width: 992px) {}
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (min-width: 1050px) {
+  nav {
+    height: 5vw;
+  }
+  .sectionHeader {
+    font-size: 4vw;
+  }
+}
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (min-width: 1200px) {
+  nav {
+    height: 4vw;
+  }
+  .nav {
+    font-size: 1.8vw;
+  }
+  .sectionHeader {
+    font-size: 3.5vw;
+  }
+  footer {
+    font-size: 2.1vw;
+    padding: 5px;
+  }
+}
+
+/* Extra-Large Devices & Wide Screens */
+
+@media only screen and (min-width: 1500px) {
+  nav {
+    height: 4vw;
+  }
+  .nav {
+    font-size: 1.8vw;
+  }
+  .sectionHeader {
+    font-size: 3.5vw;
+  }
+  footer {
+    font-size: 2vw;
+  }
+}
