@@ -10,6 +10,11 @@
 
 .about {
   grid-area: abt;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .aboutContent {
@@ -43,13 +48,13 @@
 
 .mernText {
   font-family: "ZonaPro ExtraLight";
-  font-size: 3.5vw;
+  font-size: 1.2em;
 }
 
 .skills {
   padding: 8px;
   height: 100%;
-  width: 11vw;
+  width: 3em;
 }
 
 .imgContainer {
@@ -64,7 +69,38 @@
   width: 40vw;
 }
 
+.resumeWrapper {
+  padding-top: 9em;
+  color: whitesmoke;
+  font-family: "Slim Joe";
+}
+
+.resumeLink {
+  text-decoration: none;
+  font-family: "Slim Joe";
+  font-size: 2.5em;
+  color: #C4B19E;
+  
+}
+
+.resumeLink:hover {
+  text-decoration: underline;
+}
+
 /* Small Devices, Tablets */
+
+@media only screen and (min-width: 500px) {
+  .skills {
+    width: 8vw;
+  }
+  .portrait {
+    height: auto;
+    width: 35vw;
+  }
+  .mernText {
+    font-size: 1.5em;
+  }
+}
 
 @media only screen and (min-width: 768px) {
   .skills {
@@ -73,6 +109,9 @@
   .portrait {
     height: auto;
     width: 35vw;
+  }
+  .mernText {
+    font-size: 2em;
   }
 }
 
@@ -88,6 +127,9 @@
     height: auto;
     width: 28vw;
   }
+  .mernText {
+    font-size: 2em;
+  }
 }
 
 /* Large Devices, Wide Screens */
@@ -102,6 +144,9 @@
     height: auto;
     width: 25vw;
   }
+  .mernText {
+    font-size: 2em;
+  }
 }
 
 /* Large Devices, Wide Screens */
@@ -114,7 +159,10 @@
   }
   .portrait {
     height: auto;
-    width: 28vw;
+    width: 25vw;
+  }
+  .mernText {
+    font-size: 2em;
   }
 }
 
@@ -127,10 +175,10 @@
     margin-bottom: 5px;
   }
   .mernText {
-    font-size: 3vw;
+    font-size: 2em;
   }
   .portrait {
     height: auto;
-    width: 20vw;
+    width: 18vw;
   }
 }

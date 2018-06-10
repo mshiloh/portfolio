@@ -1,0 +1,222 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Quicksand:300,400,500,700|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@font-face {
+    font-family: "Slim Joe";
+    src: local("Slim Joe"), url("Slim Joe.otf");
+}
+
+@font-face {
+    font-family: "ZonaPro ExtraLight";
+    src: local("ZonaPro-ExtraLight"), url("ZonaPro-ExtraLight.otf");
+}
+
+@font-face {
+    font-family: "Century Gothic";
+    src: local("Century Gothic"), url("/Users/morgan/dev/portfolio/Century Gothic.ttf");
+}
+
+body {
+    background: black;
+    color: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+}
+
+.resumeWrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.resumeHead {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Slim Joe";
+    padding-top: 10px;
+    padding-bottom: 5px;
+    width: 100%;
+    font-size: 34px;
+}
+
+.resumeSectionHead {
+    text-align: center;
+    font-family: "Slim Joe";
+    padding-top: 10px;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(196, 177, 158, 0.432), #C4B19E, rgba(196, 177, 158, 0.432));
+    margin-bottom: 10px;
+}
+
+.listHead {
+    font-weight: 600;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    font-size: 14px;
+}
+
+.summary,
+.work,
+.education,
+.volunteer,
+.skills,
+.contact,
+.projects {
+    margin-bottom: 20px;
+}
+
+li {
+    padding-bottom: 10px;
+    margin-left: -12px;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.summary {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.summaryContent {
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.work {
+    border: 3px solid #C4B19E;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.workHead {
+    width: 100%;
+}
+
+.volunteer {
+    background-color: #C4B19E;
+    color: black;
+}
+
+.volunteerList {
+    padding-top: 5px;
+}
+
+.contact {
+    background-color: #C4B19E;
+    color: black;
+    padding: 20px;
+}
+
+.resContactImg {
+    height: auto;
+    width: 30px;
+    padding-bottom: 3px;
+}
+
+.email {
+    padding-top: 15px;
+}
+
+.skillsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills {
+    display: grid;
+    grid-template-areas: "leftSkill rightSkill";
+}
+
+.skillsHead {
+    margin-bottom: 10px;
+}
+
+.leftSkills {
+    grid-area: leftSkill;
+}
+
+.rightSkills {
+    grid-area: rightSkill;
+    margin-left: 30px;
+}
+
+.contact {
+    text-align: center;
+}
+
+.projectsSub {
+    text-align: center;
+}
+
+@media only screen and (min-width: 700px) {
+    .resumeWrapper {
+        padding: 20px;
+    }
+    .resumeContainer {
+        display: grid;
+        grid-template-areas: "left right";
+        grid-template-columns: 2fr 1fr;
+    }
+    .left {
+        grid-area: left;
+    }
+    .right {
+        grid-area: right;
+        padding-left: 20px;
+    }
+    .resumeSectionHead {
+        padding-top: 10px;
+        text-align: center;
+        padding-bottom: 5px;
+    }
+    .resumeHead {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 4em;
+    }
+    .skills,
+    .contact .projects {
+        padding-bottom: 20px;
+    }
+    li {
+        padding-bottom: 5px;
+    }
+    .summary {
+        text-align: center;
+    }
+    .workHead {
+        width: 100%;
+    }
+    .skills {
+        display: grid;
+        grid-template-areas: "leftSkill rightSkill";
+    }
+    .leftSkill {
+        grid-area: leftSkill;
+    }
+    .rightSkill {
+        grid-area: rightSkill;
+    }
+    .contact {
+        text-align: center;
+    }
+    .projectsSub {
+        text-align: center;
+    }
+}

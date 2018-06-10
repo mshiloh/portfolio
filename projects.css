@@ -15,17 +15,19 @@
   justify-content: space-evenly;
   align-items: center;
   background-repeat: no-repeat;
+  padding-bottom:5em;  
 }
 
 .projectSubheadContainer {
-  background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/0xPgM5l/elegant-background-wedding-loop-animation_x1ej4ywvi__F0000.png");
-  background-position: center;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  color: rgb(214, 186, 158);
+  /* color: rgb(214, 192, 168); */
+  
 }
 
 .projectSubhead {
-  font-size: 5vw;
+  font-size: 2.5em;
+  /* color: rgb(214, 192, 168); */
+  
 }
 
 .flashdeck,
@@ -77,6 +79,9 @@
     background-repeat: no-repeat;
     padding: 20px;
   }
+  .projectSubhead {
+    font-size: 2.5em;
+  }
   .projectImageContainer {
     display: flex;
     flex-direction: column;
@@ -99,5 +104,11 @@
   .flashdeck,
   .set {
     padding-top: 0px;
+  }
+  .projectSubheadContainer {
+    background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/0xPgM5l/elegant-background-wedding-loop-animation_x1ej4ywvi__F0000.png");
+    background-position: center;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
   }
 }

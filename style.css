@@ -3,7 +3,7 @@
   font-family: Helvetica, sans-serif;
   margin: 0;
 }
-
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Quicksand:300,400,500,700|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 @font-face {
   font-family: "ZonaPro ExtraLight";
   src: local("ZonaPro-ExtraLight"), url("ZonaPro-ExtraLight.otf");
@@ -14,18 +14,10 @@
   src: local("Slim Joe"), url("Slim Joe.otf");
 }
 
-/* @font-face {
-  font-family: "Slim Joe";
-  src: local("Slim Joe"), url("Slim Joe.otf");
-}
-
 @font-face {
-  font-family: 'Slim Joe';
-  src: url('SlimJoe.eot');
-  src: url('SlimJoe.eot?#iefix') format('embedded-opentype'), url('SlimJoe.woff2') format('woff2'), url('SlimJoe.woff') format('woff'), url('SlimJoe.ttf') format('truetype'), url("Slim Joe.otf") format("opentype"), url('Slim Joe.svg') format('svg');
-  font-weight: normal;
-  font-style: normal;
-} */
+  font-family: "Century Gothic";
+  src: local("Century Gothic"), url("/Users/morgan/dev/portfolio/Century Gothic.ttf");
+}
 
 /* ----------- NAV ----------- */
 
@@ -37,7 +29,7 @@ nav {
   float: top;
   z-index: 1;
   background-color: rgba(59, 59, 59, 0.863);
-  height: 6vw;
+  padding: 10px;
   width: 100vw;
 }
 
@@ -51,10 +43,22 @@ a {
   justify-content: space-evenly;
   align-items: center;
   font-family: "ZonaPro ExtraLight";
+
   color: #C4B19E;
   margin-left: -5vw;
   width: 100vw;
-  font-size: 3.5vw;
+  font-size: 1em;
+}
+
+.link {
+  padding-bottom: 5em;
+}
+
+.nav:hover {
+  transition: all .2s ease-in-out;
+  -ms-transform: scale( 1.2, 1.2);
+  -webkit-transform: scale( 1.2, 1.2);
+  transform: scale( 1.2, 1.2);
 }
 
 /* ----------- HEADER ----------- */
@@ -62,9 +66,6 @@ a {
 .header {
   height: 100vh;
   padding-top: 3.5vw;
-}
-
-header {
   grid-area: hdr;
   display: flex;
   flex-direction: column;
@@ -77,24 +78,21 @@ header {
 }
 
 .clip {
-  background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/0xPgM5l/elegant-background-wedding-loop-animation_x1ej4ywvi__F0000.png");
-  background-position: center;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  color: rgb(207, 176, 144);
 }
 
 .banner {
   grid-area: bnr;
   text-align: center;
   font-family: "Slim Joe";
-  margin-top: 4vh;
-  font-size: 11vw;
+  
+  font-size: 2.9em;
 }
 
 .tagline {
   grid-area: tag;
   font-family: "ZonaPro ExtraLight";
-  font-size: 5vw;
+  font-size: 1.7em;
 }
 
 /* ----------- CUBE ----------- */
@@ -162,12 +160,8 @@ header {
   text-align: center;
   align-items: center;
   justify-content: center;
-  background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/0xPgM5l/elegant-background-wedding-loop-animation_x1ej4ywvi__F0000.png");
-  background-position: center;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  color: rgb(224, 203, 180);
   margin-bottom: 20px;
-  font-weight: 900;
 }
 
 .sectionHeader {
@@ -176,7 +170,7 @@ header {
   align-items: center;
   justify-content: center;
   margin: 0;
-  padding: 5px;
+  padding: 10px;
   font-family: "Slim Joe";
   font-size: 7vw;
   width: 80vw;
@@ -195,11 +189,11 @@ hr {
 }
 
 .topHr {
-  margin-top: 8vh;
+  margin-top: 1em;
 }
 
 .bottomHr {
-  margin-bottom: 5vh;
+  margin-bottom: 1.5em;
 }
 
 /* ----------- FOOTER ----------- */
@@ -210,7 +204,7 @@ hr {
   flex-direction: column;
   align-items: center;
   background-color: black;
-  padding: 1vh;
+  padding: 10px;
 }
 
 footer {
@@ -220,14 +214,11 @@ footer {
   align-items: center;
   font-family: "Slim Joe";
   color: white;
-  font-size: 5vw;
+  font-size: 1.2em;
 }
 
 .footerTextContainer {
-  background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/0xPgM5l/elegant-background-wedding-loop-animation_x1ej4ywvi__F0000.png");
-  background-position: center;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  color: rgb(224, 203, 180);
   margin-right: 10px;
 }
 
@@ -238,52 +229,68 @@ footer {
 .github,
 .linkedin {
   margin-left: 10px;
-  height: 4.5vh;
+  height: 2em;
   width: auto;
+  transition: all .2s ease-in-out;
 }
 
 .github:hover,
 .linkedin:hover {
   margin-left: 10px;
-  height: 5vh;
+  width: 100%;
+  transition: all .2s ease-in-out;
+  -ms-transform: scale( 1.2, 1.2);
+  -webkit-transform: scale( 1.2, 1.2);
+  transform: scale( 1.2, 1.2);
   width: auto;
+}
+
+@media only screen and (min-width: 600px) {
+.banner {
+  font-size: 4.2em;
+}
 }
 
 /* Small Devices, Tablets */
 
 @media only screen and (min-width: 768px) {
+  .nav {
+    font-size: 1.3em;
+  }
   .sectionHeader {
-    font-size: 5vw;
+    font-size: 2em;
   }
 }
 
-/* Small Devices, Tablets */
-
-@media only screen and (min-width: 768px) {}
-
 /* Medium Devices, Desktops */
 
-@media only screen and (min-width: 992px) {}
+@media only screen and (min-width: 992px) {
+  .nav {
+    font-size: 1.4em;
+  }
+  .clip,
+  .sectionHeaderContainer,
+  .footerTextContainer {
+    background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/0xPgM5l/elegant-background-wedding-loop-animation_x1ej4ywvi__F0000.png");
+    background-position: center;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+}
 
 /* Large Devices, Wide Screens */
 
 @media only screen and (min-width: 1050px) {
-  nav {
-    height: 5vw;
-  }
   .sectionHeader {
-    font-size: 4vw;
+    font-size: 2.5em;
   }
 }
 
 /* Large Devices, Wide Screens */
 
 @media only screen and (min-width: 1200px) {
-  nav {
-    height: 4vw;
-  }
   .nav {
-    font-size: 1.8vw;
+    font-size: 1.7em;
   }
   .sectionHeader {
     font-size: 3.5vw;

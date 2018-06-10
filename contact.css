@@ -10,8 +10,9 @@
 
 .contactWrapper {
     padding: 20px;
-    font-weight: 900;
     width: 100%;
+    height: 70vh;
+  
 }
 
 .contactContainer {
@@ -19,32 +20,34 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
 .contactDetailsWrapper {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    font-weight: 900;    
     align-items: center;
     padding-bottom: 50px;
 }
 
 .contactDetailsClipWrap {
-    background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/0xPgM5l/elegant-background-wedding-loop-animation_x1ej4ywvi__F0000.png");
-    background-position: center;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+    color: rgb(243, 220, 196);
 }
 
 .phoneText,
 .emailText {
     font-family: "ZonaPro ExtraLight";
-    font-size: 5.5vw;
+    font-size: 1.5em;
+    transition: all .2s ease-in-out;
+    color: rgb(224, 203, 180);
 }
 
 .emailText:hover {
     cursor: pointer;
     text-decoration: underline;
-    font-size: 6vw;
+    font-size: 1.6em;
 }
 
 .contactImg {
@@ -227,6 +230,12 @@ button {
     }
     .contactImg {
         width: 8vw;
+    }
+    .contactDetailsClipWrap {
+        background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/0xPgM5l/elegant-background-wedding-loop-animation_x1ej4ywvi__F0000.png");
+        background-position: center;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
     }
 }
 
