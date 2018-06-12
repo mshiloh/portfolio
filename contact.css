@@ -223,10 +223,10 @@ button {
 @media only screen and (min-width: 800px) {
     .phoneText,
     .emailText {
-        font-size: 3em;
+        font-size: 2em;
     }
     .emailText:hover {
-        font-size: 3.2em;
+        font-size: 2.2em;
     }
     .contactImg {
         width: 8vw;
