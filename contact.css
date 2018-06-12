@@ -39,7 +39,7 @@
 .phoneText,
 .emailText {
     font-family: "ZonaPro ExtraLight";
-    font-size: 1.5em;
+    font-size: 1.1em;
     transition: all .2s ease-in-out;
     color: rgb(224, 203, 180);
 }
@@ -47,7 +47,7 @@
 .emailText:hover {
     cursor: pointer;
     text-decoration: underline;
-    font-size: 1.6em;
+    font-size: 1.2em;
 }
 
 .contactImg {
@@ -197,10 +197,10 @@ button {
 @media only screen and (min-width: 550px) {
     .phoneText,
     .emailText {
-        font-size: 5vw;
+        font-size: 1.4em;
     }
     .emailText:hover {
-        font-size: 6vw;
+        font-size: 1.5em;
     }
     .contactImg {
         width: 8vw;
@@ -210,10 +210,10 @@ button {
 @media only screen and (min-width: 650px) {
     .phoneText,
     .emailText {
-        font-size: 5vw;
+        font-size: 1.8em;
     }
     .emailText:hover {
-        font-size: 6vw;
+        font-size: 2em;
     }
     .contactImg {
         width: 8vw;
@@ -223,10 +223,10 @@ button {
 @media only screen and (min-width: 800px) {
     .phoneText,
     .emailText {
-        font-size: 4vw;
+        font-size: 3em;
     }
     .emailText:hover {
-        font-size: 5vw;
+        font-size: 3.2em;
     }
     .contactImg {
         width: 8vw;
